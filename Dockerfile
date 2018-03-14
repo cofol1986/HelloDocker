@@ -37,9 +37,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ADD log4j.properties /opt/spark/conf/log4j.properties
-ADD start-common.sh start-worker start-master /
-ADD core-site.xml /opt/spark/conf/core-site.xml
-ADD spark-defaults.conf /opt/spark/conf/spark-defaults.conf
 ENV PATH $PATH:/opt/spark/bin
 
